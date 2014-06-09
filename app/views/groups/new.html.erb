@@ -1,0 +1,7 @@
+<h1>Create a group</h1>
+
+<%= form_for(@group, url: groups_path, method: 'post') do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Go go go!" %>
+<% end %>
