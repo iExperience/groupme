@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'groups/new' => 'groups#new'
   post 'groups' => 'groups#create'
 
+
+  get 'profile' => 'users#profile'
+  put 'users' => 'users#update'
   post 'users/add_to_group/:group_id' => 'users#add_to_group'
   delete 'users/remove_from_group/:group_id' => 'users#remove_from_group'
   get 'users/index'

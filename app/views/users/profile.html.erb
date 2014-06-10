@@ -1,0 +1,10 @@
+<h1>Hey this is your profile</h1>
+
+<p>Upload a picture here:</p>
+<%= form_for(current_user, url: '/users',
+  method: 'put') do |f| %>
+  <%= f.label :picture %>
+  <%= f.file_field :avatar %>
+  <%= f.submit "Add pic" %>
+<% end %>
+

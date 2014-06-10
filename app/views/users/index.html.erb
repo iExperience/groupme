@@ -2,7 +2,10 @@
 <% if flash[:error] %>
   <p style="color:red;"><%= flash[:error] %></p>
 <% end %>
-<p>You're signed in as <%= current_user.email %>.</p>
+<p>
+  <%= image_tag current_user.avatar.url(:thumb) %>
+  You're signed in as <%= current_user.email %>.
+</p>
 
 <p>Your groups:</p>
 
@@ -31,4 +34,8 @@
 
 <p>
   <%= link_to "Log out", destroy_user_session_path, method: 'delete' %>
+</p>
+
+<p>
+  <%= link_to "Profile", "/profile" %>
 </p>
